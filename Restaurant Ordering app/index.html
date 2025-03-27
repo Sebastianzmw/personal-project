@@ -1,0 +1,30 @@
+<html>
+    <head>
+		<link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+		<div>
+			<header></header>
+		</div>
+		<main>
+			<section id="items"></section>
+			<section id="order-lists"></section>
+			<section id="order-complete"></section>
+		</main>
+		<div class="modal" id="modal">
+			<h3 class="model-title">Enter card details</details></h3>
+			<div class="modal-content">
+				<form id="form">
+					<input id="user-name" name="name" type="text" placeholder="Enter your name" required>
+					<input id="credit-card" name="credit-card" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" 
+					autocomplete="cc-number" maxlength="19" placeholder="Enter your number" required>
+					<input id="cvv" name="cvv" type="tel" maxlength="3" placeholder="Enter CVV" required>
+					<input id="pay-btn" type="submit" value="Pay">
+				</form>
+			</div>
+		</div>
+	<script src="index.js" type="module"></script>
+    </body>
+</html>
+
