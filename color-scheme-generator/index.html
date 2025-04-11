@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="index.css">
+		<title>Color Scheme Generator</title>
+	</head>
+	<body>
+		<main>
+			<div class="form-container">
+				<div class="color-picker">
+					<input type="color" id="seed-color" value="#3498db">
+				</div>
+
+				<div class="scheme-selector">
+					<select id="color-scheme">
+						<option value="monochrome">Monochrome</option>
+						<option value="monochrome-dark">Monochrome-dark</option>
+						<option value="monochrome-light">Monochrome-light</option>
+						<option value="analogic">Analogic</option>
+						<option value="complement">Complement</option>
+						<option value="analogic-complement">Analogic-complement</option>
+						<option value="triad">Triad</option>
+						<option value="quad">Quad</option>
+					</select>
+				</div>
+
+				<div class="get-scheme">
+					<button id="generate-btn">Get color scheme</button>
+				</div>
+			</div>
+
+			<div class="colors-container" id="colors-container">
+			</div>
+		</main>
+		<script src="index.js"></script>
+	</body>
+</html>

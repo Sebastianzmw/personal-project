@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+main {
+    max-width: 550px;
+    margin: 40px auto;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.color-picker input[type="color"] {
+    width: 60px;
+    height: 40px;
+    border: 0.5px solid #d1d5db;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.scheme-selector select {
+    height: 40px;
+    padding: 0 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background-color: white;
+    font-size: 14px;
+    min-width: 200px;
+}
+
+.get-scheme button {
+    height: 40px;
+    padding: 0 15px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.get-scheme button:hover {
+    background-color: #2563eb;
+}
+
+/* Color swatches container */
+.colors-container {
+    display: flex;
+    height: 400px;
+}
+
+/* Individual color swatch */
+.color-swatch {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.color-swatch:hover {
+    transform: scale(0.98);
+}
+
+/* Color hex value */
+.color-hex {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+    padding: 8px 12px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Queries for Responsive Design */
+
+/* Mobile devices (portrait phones, less than 576px) */
+@media (max-width: 576px) {
+    main {
+        max-width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+    
+    .form-container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 10px;
+    }
+    
+    .color-picker, .scheme-selector, .get-scheme {
+        width: 100%;
+    }
+    
+    .color-picker {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .color-picker input[type="color"] {
+        width: 80px;
+        height: 50px;
+    }
+    
+    .scheme-selector select {
+        width: 100%;
+        min-width: unset;
+    }
+    
+    .get-scheme button {
+        width: 100%;
+    }
+    
+    .colors-container {
+        height: 300px;
+        flex-direction: column;
+    }
+    
+    .color-swatch {
+        height: 60px;
+    }
+    
+    .color-hex {
+        margin-bottom: 0;
+        margin-right: 15px;
+        align-self: flex-end;
+    }
+}
+
+/* Tablets and small desktops (576px to 992px) */
+@media (min-width: 577px) and (max-width: 992px) {
+    main {
+        max-width: 90%;
+    }
+    
+    .scheme-selector select {
+        min-width: 150px;
+    }
+    
+    .colors-container {
+        height: 350px;
+    }
+}
+
+/* Large desktops (greater than 992px) */
+@media (min-width: 993px) {
+    main {
+        max-width: 800px;
+    }
+    
+    .form-container {
+        padding: 20px;
+    }
+    
+    .color-picker input[type="color"] {
+        width: 70px;
+        height: 45px;
+    }
+    
+    .scheme-selector select {
+        min-width: 250px;
+    }
+    
+    .colors-container {
+        height: 450px;
+    }
+}
